@@ -1,0 +1,250 @@
+$grey: #494949;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.films-list {
+    text-align: left;
+    position: relative;
+    &__button-load {
+    margin: 15px;
+    background: $grey;
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 3px;
+    }
+    &__item {
+      display: flex;
+      border: 1px solid #e5e1e1;
+      align-items: center;
+      padding: 10px;
+      position: relative;
+  
+      @media screen and (max-width: 580px) {
+        justify-content: space-evenly;
+      }
+  
+      a {
+        color: #686464;
+        text-decoration: none;
+      }
+  
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+  
+      .fa {
+        font-size: 26px;
+      }
+  
+      &-title {
+        padding: 10px;
+      }
+  
+      button {
+        position: absolute;
+        right: 20px;
+      }
+    }
+  
+    &__tags-wrapper {
+      padding: 10px;
+      padding-right: 68px;
+      display: flex;
+        max-height: 19px;
+  
+      @media screen and (max-width: 580px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: initial;
+      }
+  
+      span {
+        padding: 0px 6px;
+        border-radius: 34px;
+        background: #474646;
+        margin: 0 5px;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+  
+        @media screen and (max-width:580px) {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+  
+  .active.item {
+    background: red;
+  }
+  
+  .main-container {
+    max-width: 786px;
+    min-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .search-block {
+    position:relative;
+    input {
+      width: 100%;
+      margin: 24px 0;
+      height: 36px;
+      font-size: 17px;
+    }
+          &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 31px;
+          height: 32px;
+          background: url('./assets/img/search.png');
+          right: 6px;
+    top: 28px;
+      }
+  }
+  
+  .tabs-block {
+    margin-bottom: 29px;
+  
+    .menu {
+    justify-content: center;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      display: flex;
+  
+      .item {
+        color: $grey;
+        padding: 1px 23px;
+        background: #ffffff;
+        border: 1px solid #686565;
+        cursor: pointer;
+        font-size:15px;
+      }
+  
+      .active {
+        color: white;
+        background: $grey;
+        border: 1px solid #686565;
+      }
+    }
+  }
+  
+  .back-button {
+    position: absolute;
+    left: 27px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $grey;
+    text-decoration: none;
+    top: 3px;
+  }
+  
+  .tags-block {
+    display: flex;
+    margin: 10px 0;
+  
+    span {
+      background: #474646;
+      color: white;
+      padding: 0 6px;
+      font-size: 14px;
+      border-radius: 34px;
+
+      a {
+        cursor: pointer;
+        i {
+          color: white;
+        }
+      }
+  
+      button {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .block-film {
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+  
+    &__poster {
+      width: 157px;
+      height: 220px;
+      background: red;
+    }
+  
+    &__button {
+      button {
+        border-radius: 35px;
+        cursor: pointer;
+        padding: 10px;
+        margin: 22px;
+  
+      }
+  
+      &--delete {
+        background: white;
+        color: $grey;
+        border: 1px solid $grey;
+      }
+  
+      &--add {
+        background: $grey;
+        color: white;
+        border: 1px solid $grey;
+      }
+    }
+    a{
+      cursor: pointer;
+    }
+  }
+  
+  *:focus {
+    outline: none
+  }
+  .react-tooltip-lite {
+    background: #333;
+    color: white;
+  }
+  
+  .react-tooltip-lite-arrow {
+    border-color: #333;
+  }
+
+  .loader {
+    position: absolute;
+    background: white;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.react-spinner-loader-svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: white;
+    z-index: 1;
+    opacity: 0.8;
+    text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
